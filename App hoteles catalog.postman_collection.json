@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "6e7e40b4-dba0-4db3-9321-fa4af7ba3b61",
+		"name": "App goteles guest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7560309"
+	},
+	"item": [
+		{
+			"name": "msvc-lab-guest",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/guests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/guests/658b256b0555f5595c93533e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guests",
+								"658b256b0555f5595c93533e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"guestType\":{},\r\n    \"firstName\":\"Alejandro\",\r\n    \"lastName\":\"Alvarado\",\r\n    \"email\":\"abc@def.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/guests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update room",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"guestType\":{\r\n        \"id\":\"1\",\r\n        \"name\":\"VIP\"\r\n    },\r\n    \"firstName\":\"Alvaro\",\r\n    \"lastName\":\"Alvarado\",\r\n    \"email\":\"abc@def.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/guests/658b256b0555f5595c93533e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guests",
+								"658b256b0555f5595c93533e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/guests/658b5d920fe06306d5de746b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"guests",
+								"658b5d920fe06306d5de746b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
